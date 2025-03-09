@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smart_prep/providers/student_providers.dart';
 import 'package:smart_prep/services/secure_storage_service.dart';
 import 'package:smart_prep/widgets/student_question_paper.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class StudentsQuestionPaperListPage extends ConsumerStatefulWidget {
   const StudentsQuestionPaperListPage({super.key});
@@ -23,8 +24,24 @@ class _StudentsQuestionPaperListPageState
       ref
           .read(studentNotifierProvider.notifier)
           .getAvailableQuestionPapers(token);
-      
     });
+  }
+
+  Future<void> _urlLaunch(String baseURL) async {
+    try {
+      final url = Uri.parse(baseURL);
+      if (await canLaunchUrl(url)) {
+        await launchUrl(url);
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Failed to launch Doubt Clearing Chat',
+          ),
+        ),
+      );
+    }
   }
 
   @override
@@ -39,6 +56,13 @@ class _StudentsQuestionPaperListPageState
     }
     return Scaffold(
       appBar: AppBar(title: Text('Question Papers')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _urlLaunch('https://smart-prep.netlify.app/home');
+        },
+        shape: CircleBorder(),
+        child: Icon(Icons.chat),
+      ),
       body: studentState.isLoading
           ? Center(child: CircularProgressIndicator.adaptive())
           : studentState.availableQuestionPapers.isEmpty
