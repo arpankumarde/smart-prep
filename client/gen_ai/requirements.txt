@@ -1,0 +1,12 @@
+requests
+ipykernel
+python-dotenv
+openai
+pydantic
+agno
+google-api-python-client
+groq
+ipywidgets
+fastapi
+uvicorn
+requests
