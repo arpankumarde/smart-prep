@@ -136,3 +136,102 @@ Each student is further classified into _three proficiency levels_ per skill:
 - **Skill-Based Learning Paths**: Expanding the system to offer tailored pathways for developing technical and soft skills in addition to academic learning.
 - **Offline Access**: Developing offline capabilities to ensure uninterrupted learning in regions with limited internet connectivity.
 - **Enhanced Data Security**: Implementing advanced encryption and data protection protocols to ensure student privacy and secure information handling.
+
+## SETUP
+
+### Agent (Python)
+
+1. Navigate to the `agent` directory:
+
+   ```sh
+   cd agent
+   ```
+
+2. Create a virtual environment:
+
+   ```sh
+   python -m venv venv
+   ```
+
+3. Activate the virtual environment:
+
+   - On Windows:
+
+     ```sh
+     venv\Scripts\activate
+     ```
+
+   - On macOS/Linux:
+
+     ```sh
+     source venv/bin/activate
+     ```
+
+4. Install the required dependencies:
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+5. Add environment varible in .env:
+
+   ```sh
+   GROQ_API_KEY=
+   ```
+
+6. Run the agent:
+
+   ```sh
+   python app.py
+   ```
+
+### Server (Spring Boot)
+
+1. Navigate to the `server` directory:
+
+   ```sh
+   cd server
+   ```
+
+2. Build the project using Maven:
+
+   ```sh
+   mvn clean install
+   ```
+
+3. Add environment variables:
+
+   ```sh
+   DATABASE_URL=
+   DATABASE_USERNAME=
+   DATABASE_PASSWORD=
+   JWT_SECRET=
+   ```
+
+4. Run the Spring Boot application:
+
+   ```sh
+   mvn spring-boot:run
+   ```
+
+### Client (Flutter)
+
+1. Navigate to the `client` directory:
+
+   ```sh
+   cd client
+   ```
+
+2. Ensure you have Flutter installed. If not, follow the instructions [here](https://flutter.dev/docs/get-started/install).
+
+3. Get the Flutter dependencies:
+
+   ```sh
+   flutter pub get
+   ```
+
+4. Run the Flutter application:
+
+   ```sh
+   flutter run
+   ```
