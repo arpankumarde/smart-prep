@@ -1,0 +1,4050 @@
+{
+	"info": {
+		"_postman_id": "cb0b9b02-bd77-411d-a698-e7bbfdc73167",
+		"name": "Smart Prep",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28658772"
+	},
+	"item": [
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Teacher User\",\r\n    \"username\": \"teacher1\",\r\n    \"email\": \"teacher1@example.com\",\r\n    \"password\": \"teacher123\",\r\n    \"role\": \"ROLE_TEACHER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/auth/register"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Atul Singh\",\r\n    \"username\": \"cocatul\",\r\n    \"email\": \"atul@email.com\",\r\n    \"password\": \"cocatul11\",\r\n    \"role\": \"ROLE_STUDENT\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{hosted_url}}/auth/register"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:26:52 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "58403680-5046-4b47"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc24ab4a6a94d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjb2NhdHVsIiwiaWF0IjoxNzQxMzcyMDEyLCJleHAiOjE3NDE0NTg0MTJ9.0mD8bKkQfWi7WeT48zgrxDMV3lQrHuuTOqwSoO_EuP3rWbBqfkKczDrs3GKF1N9q\",\n    \"user\": {\n        \"id\": 4,\n        \"name\": \"Atul Singh\",\n        \"username\": \"cocatul\",\n        \"email\": \"atul@email.com\",\n        \"role\": \"ROLE_STUDENT\",\n        \"profilePictureUrl\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usernameOrEmail\": \"teacher2\",\r\n    \"password\": \"teacher123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/auth/login"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"usernameOrEmail\": \"atul@email.com\",\r\n    \"password\": \"cocatul11\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{hosted_url}}/auth/login"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:29:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "6a1458d9-755d-47a9"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc281d7a5694d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjb2NhdHVsIiwiaWF0IjoxNzQxMzcyMTUxLCJleHAiOjE3NDE0NTg1NTF9.RwUmmyuTst4l5vB5p_tMyTkOL5OabXekIFjrfAWUGZtziN_AWBYAN5wcvkCcElGv\",\n    \"user\": {\n        \"id\": 4,\n        \"name\": \"Atul Singh\",\n        \"username\": \"cocatul\",\n        \"email\": \"atul@email.com\",\n        \"role\": \"ROLE_STUDENT\",\n        \"profilePictureUrl\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get current user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/users/me"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{hosted_url}}/users/me"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:29:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "0410f8cf-f287-4915"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc288fa96994d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"name\": \"Admin User\",\n    \"username\": \"admin\",\n    \"email\": \"admin@smartprep.com\",\n    \"role\": \"ROLE_ADMIN\",\n    \"profilePictureUrl\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Get all users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/users"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{hosted_url}}/users"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:30:00 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "0caa9fb1-70b1-44d5"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc294fab0594d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 2,\n            \"name\": \"Test Student\",\n            \"username\": \"teststudent\",\n            \"email\": \"student@test.com\",\n            \"role\": \"ROLE_STUDENT\",\n            \"profilePictureUrl\": null\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Admin User\",\n            \"username\": \"admin\",\n            \"email\": \"admin@smartprep.com\",\n            \"role\": \"ROLE_ADMIN\",\n            \"profilePictureUrl\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Atul Singh\",\n            \"username\": \"cocatul\",\n            \"email\": \"atul@email.com\",\n            \"role\": \"ROLE_STUDENT\",\n            \"profilePictureUrl\": null\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"unsorted\": true,\n            \"sorted\": false,\n            \"empty\": true\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"totalPages\": 1,\n    \"totalElements\": 3,\n    \"last\": true,\n    \"numberOfElements\": 3,\n    \"first\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"unsorted\": true,\n        \"sorted\": false,\n        \"empty\": true\n    },\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get user by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{hosted_url}}/users/4"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{hosted_url}}/users/4"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:30:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "23ca85d3-112c-48cb"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "CF-Cache-Status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc29facbcc94d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"name\": \"Atul Singh\",\n    \"username\": \"cocatul\",\n    \"email\": \"atul@email.com\",\n    \"role\": \"ROLE_STUDENT\",\n    \"profilePictureUrl\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Question Bank",
+					"item": [
+						{
+							"name": "Create question bank",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"General Knowledge trivia\",\r\n    \"subject\": \"General Knowledge\",\r\n    \"description\": \"GK quiz\",\r\n    \"public\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/question-banks"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Physics 101\",\r\n    \"subject\": \"Physics\",\r\n    \"description\": \"Fundamental concepts of physics for beginners\",\r\n    \"public\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/question-banks"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 19:38:58 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"name\": \"Physics 101\",\n    \"description\": \"Fundamental concepts of physics for beginners\",\n    \"creatorId\": 6,\n    \"creatorName\": \"Teacher User\",\n    \"createdAt\": \"2025-03-08T01:08:58.3048038\",\n    \"updatedAt\": \"2025-03-08T01:08:58.3048038\",\n    \"public\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get all my question banks (paginated)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/question-banks/my-banks?page=0&size=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"question-banks",
+										"my-banks"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/question-banks/my-banks?page=0&size=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"question-banks",
+												"my-banks"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 20:11:55 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 10,\n            \"name\": \"d 101\",\n            \"description\": \"Fundamental concepts of a for beginners\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"createdAt\": \"2025-03-08T01:41:03.831813\",\n            \"updatedAt\": \"2025-03-08T01:41:03.831813\",\n            \"public\": true\n        },\n        {\n            \"id\": 9,\n            \"name\": \"c 101\",\n            \"description\": \"Fundamental concepts of a for beginners\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"createdAt\": \"2025-03-08T01:40:32.546367\",\n            \"updatedAt\": \"2025-03-08T01:40:32.546367\",\n            \"public\": true\n        },\n        {\n            \"id\": 8,\n            \"name\": \"b 101\",\n            \"description\": \"Fundamental concepts of a for beginners\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"createdAt\": \"2025-03-08T01:40:11.470717\",\n            \"updatedAt\": \"2025-03-08T01:40:11.470717\",\n            \"public\": true\n        },\n        {\n            \"id\": 6,\n            \"name\": \"a 101\",\n            \"description\": \"Fundamental concepts of a for beginners\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"createdAt\": \"2025-03-08T01:37:32.85727\",\n            \"updatedAt\": \"2025-03-08T01:37:32.85727\",\n            \"public\": false\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Biology 101\",\n            \"description\": \"Fundamental concepts of Biology for beginners\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"createdAt\": \"2025-03-08T01:32:51.03045\",\n            \"updatedAt\": \"2025-03-08T01:32:51.03045\",\n            \"public\": false\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Chemistry 101\",\n            \"description\": \"Fundamental concepts of Chemistry for beginners\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"createdAt\": \"2025-03-08T01:13:00.075229\",\n            \"updatedAt\": \"2025-03-08T01:13:00.075229\",\n            \"public\": false\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Physics 101\",\n            \"description\": \"Fundamental concepts of physics for beginners\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"createdAt\": \"2025-03-08T01:08:58.304804\",\n            \"updatedAt\": \"2025-03-08T01:08:58.304804\",\n            \"public\": false\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 7,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 7,\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get all my question banks (non-paginated)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/question-banks/my-banks/all"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/question-banks/my-banks/all"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 20:14:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 6,\n        \"name\": \"a 101\",\n        \"description\": \"Fundamental concepts of a for beginners\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"createdAt\": \"2025-03-08T01:37:32.85727\",\n        \"updatedAt\": \"2025-03-08T01:37:32.85727\",\n        \"public\": false\n    },\n    {\n        \"id\": 8,\n        \"name\": \"b 101\",\n        \"description\": \"Fundamental concepts of a for beginners\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"createdAt\": \"2025-03-08T01:40:11.470717\",\n        \"updatedAt\": \"2025-03-08T01:40:11.470717\",\n        \"public\": true\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Biology 101\",\n        \"description\": \"Fundamental concepts of Biology for beginners\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"createdAt\": \"2025-03-08T01:32:51.03045\",\n        \"updatedAt\": \"2025-03-08T01:32:51.03045\",\n        \"public\": false\n    },\n    {\n        \"id\": 9,\n        \"name\": \"c 101\",\n        \"description\": \"Fundamental concepts of a for beginners\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"createdAt\": \"2025-03-08T01:40:32.546367\",\n        \"updatedAt\": \"2025-03-08T01:40:32.546367\",\n        \"public\": true\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Chemistry 101\",\n        \"description\": \"Fundamental concepts of Chemistry for beginners\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"createdAt\": \"2025-03-08T01:13:00.075229\",\n        \"updatedAt\": \"2025-03-08T01:13:00.075229\",\n        \"public\": false\n    },\n    {\n        \"id\": 10,\n        \"name\": \"d 101\",\n        \"description\": \"Fundamental concepts of a for beginners\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"createdAt\": \"2025-03-08T01:41:03.831813\",\n        \"updatedAt\": \"2025-03-08T01:41:03.831813\",\n        \"public\": true\n    },\n    {\n        \"id\": 1,\n        \"name\": \"Physics 101\",\n        \"description\": \"Fundamental concepts of physics for beginners\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"createdAt\": \"2025-03-08T01:08:58.304804\",\n        \"updatedAt\": \"2025-03-08T01:08:58.304804\",\n        \"public\": false\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get question bank by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/question-banks/2"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/question-banks/11"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 20:21:25 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 11,\n    \"name\": \"d 101\",\n    \"description\": \"Fundamental concepts of a for beginners\",\n    \"creatorId\": 9,\n    \"creatorName\": \"Teacher User\",\n    \"createdAt\": \"2025-03-08T01:50:58.333076\",\n    \"updatedAt\": \"2025-03-08T01:50:58.333076\",\n    \"public\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Update question bank",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"General Knowledge trivia\",\r\n    \"description\": \"GK quiz\",\r\n    \"public\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/question-banks/2"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Chemistry 101\",\r\n    \"description\": \"Fundamental concepts of Chemistry for beginners\",\r\n    \"public\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/question-banks/2"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 20:24:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"name\": \"Chemistry 101\",\n    \"description\": \"Fundamental concepts of Chemistry for beginners\",\n    \"creatorId\": 6,\n    \"creatorName\": \"Teacher User\",\n    \"createdAt\": \"2025-03-08T01:13:00.075229\",\n    \"updatedAt\": \"2025-03-08T01:54:16.2088959\",\n    \"public\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete question bank",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url}}/question-banks/9"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{url}}/question-banks/9"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 20:25:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Question bank deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Question Paper",
+					"item": [
+						{
+							"name": "Create a question paper",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Class Test\",\r\n    \"description\": \"Class test II\",\r\n    \"questionBankId\": 2,\r\n    \"duration\": 20,\r\n    \"totalQuestions\": 10,\r\n    \"difficultyLevel\": \"EASY\",\r\n    \"totalMarks\": 30,\r\n    \"passingMarks\": 10,\r\n    \"published\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/question-papers"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Mechanics Final Exam\",\r\n    \"description\": \"Comprehensive exam covering Newton's laws and kinematics\",\r\n    \"questionBankId\": 1,\r\n    \"duration\": 120,\r\n    \"totalQuestions\": 50,\r\n    \"difficultyLevel\": \"MEDIUM\",\r\n    \"totalMarks\": 100,\r\n    \"passingMarks\": 40,\r\n    \"published\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/question-papers"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 03:01:33 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"Mechanics Final Exam\",\n    \"description\": \"Comprehensive exam covering Newton's laws and kinematics\",\n    \"questionBankId\": 1,\n    \"questionBankName\": \"Physics 101\",\n    \"creatorId\": 6,\n    \"creatorName\": \"Teacher User\",\n    \"duration\": 120,\n    \"difficultyLevel\": \"MEDIUM\",\n    \"totalQuestions\": 50,\n    \"totalMarks\": 100,\n    \"passingMarks\": 40,\n    \"published\": false,\n    \"createdAt\": \"2025-03-08T08:31:33.765818\",\n    \"updatedAt\": \"2025-03-08T08:31:33.765818\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get question paper by question bank (paginated)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/question-papers/bank/2?page=0&size=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"question-papers",
+										"bank",
+										"2"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/question-papers/bank/1?page=0&size=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"question-papers",
+												"bank",
+												"1"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 03:04:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 2,\n            \"title\": \"Mechanics Final Exam\",\n            \"description\": \"Comprehensive exam covering Newton's laws and kinematics\",\n            \"questionBankId\": 1,\n            \"questionBankName\": \"Physics 101\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"duration\": 120,\n            \"difficultyLevel\": \"MEDIUM\",\n            \"totalQuestions\": 50,\n            \"totalMarks\": 100,\n            \"passingMarks\": 40,\n            \"published\": false,\n            \"createdAt\": \"2025-03-08T08:31:33.765818\",\n            \"updatedAt\": \"2025-03-08T08:31:33.765818\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Mechanics Final Exam\",\n            \"description\": \"Comprehensive exam covering Newton's laws and kinematics\",\n            \"questionBankId\": 1,\n            \"questionBankName\": \"Physics 101\",\n            \"creatorId\": 6,\n            \"creatorName\": \"Teacher User\",\n            \"duration\": 120,\n            \"difficultyLevel\": \"MEDIUM\",\n            \"totalQuestions\": 50,\n            \"totalMarks\": 100,\n            \"passingMarks\": 40,\n            \"published\": false,\n            \"createdAt\": \"2025-03-08T08:21:53.413579\",\n            \"updatedAt\": \"2025-03-08T08:21:53.413579\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalElements\": 2,\n    \"totalPages\": 1,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get question paper by question bank (non-paginated)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/question-papers/bank/2/all"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/question-papers/bank/1/all"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 03:06:11 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Mechanics Final Exam\",\n        \"description\": \"Comprehensive exam covering Newton's laws and kinematics\",\n        \"questionBankId\": 1,\n        \"questionBankName\": \"Physics 101\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"duration\": 120,\n        \"difficultyLevel\": \"MEDIUM\",\n        \"totalQuestions\": 50,\n        \"totalMarks\": 100,\n        \"passingMarks\": 40,\n        \"published\": false,\n        \"createdAt\": \"2025-03-08T08:21:53.413579\",\n        \"updatedAt\": \"2025-03-08T08:21:53.413579\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Mechanics Final Exam\",\n        \"description\": \"Comprehensive exam covering Newton's laws and kinematics\",\n        \"questionBankId\": 1,\n        \"questionBankName\": \"Physics 101\",\n        \"creatorId\": 6,\n        \"creatorName\": \"Teacher User\",\n        \"duration\": 120,\n        \"difficultyLevel\": \"MEDIUM\",\n        \"totalQuestions\": 50,\n        \"totalMarks\": 100,\n        \"passingMarks\": 40,\n        \"published\": false,\n        \"createdAt\": \"2025-03-08T08:31:33.765818\",\n        \"updatedAt\": \"2025-03-08T08:31:33.765818\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get question paper by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/question-papers/2"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/question-papers/2"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 03:07:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"Mechanics Final Exam\",\n    \"description\": \"Comprehensive exam covering Newton's laws and kinematics\",\n    \"questionBankId\": 1,\n    \"questionBankName\": \"Physics 101\",\n    \"creatorId\": 6,\n    \"creatorName\": \"Teacher User\",\n    \"duration\": 120,\n    \"difficultyLevel\": \"MEDIUM\",\n    \"totalQuestions\": 50,\n    \"totalMarks\": 100,\n    \"passingMarks\": 40,\n    \"published\": false,\n    \"createdAt\": \"2025-03-08T08:31:33.765818\",\n    \"updatedAt\": \"2025-03-08T08:31:33.765818\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update question paper",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Class Test\",\r\n    \"description\": \"Class test II\",\r\n    \"questionBankId\": 2,\r\n    \"duration\": 10,\r\n    \"totalQuestions\": 10,\r\n    \"difficultyLevel\": \"EASY\",\r\n    \"totalMarks\": 30,\r\n    \"passingMarks\": 10,\r\n    \"published\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/question-papers/2"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Updated Mechanics Exam\",\r\n    \"description\": \"Updated exam covering classical mechanics\",\r\n    \"questionBankId\": 1,\r\n    \"duration\": 150,\r\n    \"totalQuestions\": 60,\r\n    \"difficultyLevel\": \"HARD\",\r\n    \"totalMarks\": 120,\r\n    \"passingMarks\": 48,\r\n    \"published\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/question-papers/2"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 03:10:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"Updated Mechanics Exam\",\n    \"description\": \"Updated exam covering classical mechanics\",\n    \"questionBankId\": 1,\n    \"questionBankName\": \"Physics 101\",\n    \"creatorId\": 6,\n    \"creatorName\": \"Teacher User\",\n    \"duration\": 150,\n    \"difficultyLevel\": \"HARD\",\n    \"totalQuestions\": 60,\n    \"totalMarks\": 120,\n    \"passingMarks\": 48,\n    \"published\": true,\n    \"createdAt\": \"2025-03-08T08:31:33.765818\",\n    \"updatedAt\": \"2025-03-08T08:40:06.6947195\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Toggle question paper publish status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": "{{url}}/question-papers/2/publish"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": "{{url}}/question-papers/2/publish"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 03:12:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"Updated Mechanics Exam\",\n    \"description\": \"Updated exam covering classical mechanics\",\n    \"questionBankId\": 1,\n    \"questionBankName\": \"Physics 101\",\n    \"creatorId\": 6,\n    \"creatorName\": \"Teacher User\",\n    \"duration\": 150,\n    \"difficultyLevel\": \"HARD\",\n    \"totalQuestions\": 60,\n    \"totalMarks\": 120,\n    \"passingMarks\": 48,\n    \"published\": true,\n    \"createdAt\": \"2025-03-08T08:31:33.765818\",\n    \"updatedAt\": \"2025-03-08T08:42:04.8223386\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete question paper",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url}}/question-papers/3"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{url}}/question-papers/3"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 03:12:54 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Question paper deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Question",
+					"item": [
+						{
+							"name": "Create question (MCQ)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"questionText\": \"What animal is the national symbol of Australia?\",\r\n  \"questionType\": \"MCQ\",\r\n  \"difficultyLevel\": \"BEGINNER\",\r\n  \"marks\": 2,\r\n  \"expectedTimeSeconds\": 10,\r\n  \"options\": [\r\n    \"Kangaroo\",\r\n    \"Koala\",\r\n    \"Emu\",\r\n    \"Crocodile\"\r\n  ],\r\n  \"correctOptionIndex\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/questions/paper/2"
+							},
+							"response": [
+								{
+									"name": "Success (MCQ)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"questionText\": \"What is Newton's First Law of Motion?\",\r\n  \"questionType\": \"MCQ\",\r\n  \"difficultyLevel\": \"INTERMEDIATE\",\r\n  \"marks\": 5,\r\n  \"expectedTimeSeconds\": 120,\r\n  \"options\": [\r\n    \"An object at rest stays at rest unless acted upon by an external force\",\r\n    \"Force equals mass times acceleration\",\r\n    \"For every action, there is an equal and opposite reaction\",\r\n    \"Energy can neither be created nor destroyed\"\r\n  ],\r\n  \"correctOptionIndex\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/questions/paper/1"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 08:06:49 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 5,\n    \"questionText\": \"What is Newton's First Law of Motion?\",\n    \"questionType\": \"MCQ\",\n    \"difficultyLevel\": \"INTERMEDIATE\",\n    \"marks\": 5,\n    \"expectedTimeSeconds\": 120,\n    \"options\": [\n        \"An object at rest stays at rest unless acted upon by an external force\",\n        \"Force equals mass times acceleration\",\n        \"For every action, there is an equal and opposite reaction\",\n        \"Energy can neither be created nor destroyed\"\n    ],\n    \"correctOptionIndex\": 0,\n    \"modelAnswer\": null,\n    \"questionPaperId\": 1,\n    \"createdAt\": \"2025-03-08T13:36:48.8676117\",\n    \"updatedAt\": \"2025-03-08T13:36:48.8676117\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create question (SAQ)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"questionText\": \"Name the densest jungle in the world\",\r\n  \"questionType\": \"SAQ\",\r\n  \"difficultyLevel\": \"BEGINNER\",\r\n  \"marks\": 4,\r\n  \"expectedTimeSeconds\": 60,\r\n  \"modelAnswer\": \"The Amazon rainforest\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/questions/paper/2"
+							},
+							"response": [
+								{
+									"name": "Success (SAQ)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\r\n  \"questionType\": \"SAQ\",\r\n  \"difficultyLevel\": \"ADVANCED\",\r\n  \"marks\": 10,\r\n  \"expectedTimeSeconds\": 300,\r\n  \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/questions/paper/1"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 08:08:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 12,\n    \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n    \"questionType\": \"SAQ\",\n    \"difficultyLevel\": \"ADVANCED\",\n    \"marks\": 10,\n    \"expectedTimeSeconds\": 300,\n    \"options\": [],\n    \"correctOptionIndex\": null,\n    \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n    \"questionPaperId\": 1,\n    \"createdAt\": \"2025-03-08T13:38:30.0906028\",\n    \"updatedAt\": \"2025-03-08T13:38:30.0906028\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Questions by question paper (paginated)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/questions/paper/2?page=0&size=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"questions",
+										"paper",
+										"2"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/questions/paper/1?page=0&size=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"questions",
+												"paper",
+												"1"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 08:31:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"questionText\": \"What is Newton's First Law of Motion? (Updated)\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 5,\n            \"expectedTimeSeconds\": 90,\n            \"options\": [\n                \"An object at rest stays at rest unless acted upon by an external force\",\n                \"Force equals mass times acceleration\",\n                \"For every action, there is an equal and opposite reaction\",\n                \"Energy can neither be created nor destroyed\"\n            ],\n            \"correctOptionIndex\": 0,\n            \"modelAnswer\": null,\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:35:35.816094\",\n            \"updatedAt\": \"2025-03-08T13:46:00.808227\"\n        },\n        {\n            \"id\": 2,\n            \"questionText\": \"What is Newton's First Law of Motion?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"INTERMEDIATE\",\n            \"marks\": 5,\n            \"expectedTimeSeconds\": 120,\n            \"options\": [\n                \"An object at rest stays at rest unless acted upon by an external force\",\n                \"Force equals mass times acceleration\",\n                \"For every action, there is an equal and opposite reaction\",\n                \"Energy can neither be created nor destroyed\"\n            ],\n            \"correctOptionIndex\": 0,\n            \"modelAnswer\": null,\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:36:42.872393\",\n            \"updatedAt\": \"2025-03-08T13:36:42.872393\"\n        },\n        {\n            \"id\": 3,\n            \"questionText\": \"What is Newton's First Law of Motion?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"INTERMEDIATE\",\n            \"marks\": 5,\n            \"expectedTimeSeconds\": 120,\n            \"options\": [\n                \"An object at rest stays at rest unless acted upon by an external force\",\n                \"Force equals mass times acceleration\",\n                \"For every action, there is an equal and opposite reaction\",\n                \"Energy can neither be created nor destroyed\"\n            ],\n            \"correctOptionIndex\": 0,\n            \"modelAnswer\": null,\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:36:44.699023\",\n            \"updatedAt\": \"2025-03-08T13:36:44.699023\"\n        },\n        {\n            \"id\": 4,\n            \"questionText\": \"What is Newton's First Law of Motion?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"INTERMEDIATE\",\n            \"marks\": 5,\n            \"expectedTimeSeconds\": 120,\n            \"options\": [\n                \"An object at rest stays at rest unless acted upon by an external force\",\n                \"Force equals mass times acceleration\",\n                \"For every action, there is an equal and opposite reaction\",\n                \"Energy can neither be created nor destroyed\"\n            ],\n            \"correctOptionIndex\": 0,\n            \"modelAnswer\": null,\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:36:46.276443\",\n            \"updatedAt\": \"2025-03-08T13:36:46.276443\"\n        },\n        {\n            \"id\": 5,\n            \"questionText\": \"What is Newton's First Law of Motion?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"INTERMEDIATE\",\n            \"marks\": 5,\n            \"expectedTimeSeconds\": 120,\n            \"options\": [\n                \"An object at rest stays at rest unless acted upon by an external force\",\n                \"Force equals mass times acceleration\",\n                \"For every action, there is an equal and opposite reaction\",\n                \"Energy can neither be created nor destroyed\"\n            ],\n            \"correctOptionIndex\": 0,\n            \"modelAnswer\": null,\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:36:48.867612\",\n            \"updatedAt\": \"2025-03-08T13:36:48.867612\"\n        },\n        {\n            \"id\": 6,\n            \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n            \"questionType\": \"SAQ\",\n            \"difficultyLevel\": \"ADVANCED\",\n            \"marks\": 10,\n            \"expectedTimeSeconds\": 300,\n            \"options\": [],\n            \"correctOptionIndex\": null,\n            \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:38:07.702325\",\n            \"updatedAt\": \"2025-03-08T13:38:07.702325\"\n        },\n        {\n            \"id\": 7,\n            \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n            \"questionType\": \"SAQ\",\n            \"difficultyLevel\": \"ADVANCED\",\n            \"marks\": 10,\n            \"expectedTimeSeconds\": 300,\n            \"options\": [],\n            \"correctOptionIndex\": null,\n            \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:38:09.601384\",\n            \"updatedAt\": \"2025-03-08T13:38:09.601384\"\n        },\n        {\n            \"id\": 8,\n            \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n            \"questionType\": \"SAQ\",\n            \"difficultyLevel\": \"ADVANCED\",\n            \"marks\": 10,\n            \"expectedTimeSeconds\": 300,\n            \"options\": [],\n            \"correctOptionIndex\": null,\n            \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:38:10.922493\",\n            \"updatedAt\": \"2025-03-08T13:38:10.922493\"\n        },\n        {\n            \"id\": 9,\n            \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n            \"questionType\": \"SAQ\",\n            \"difficultyLevel\": \"ADVANCED\",\n            \"marks\": 10,\n            \"expectedTimeSeconds\": 300,\n            \"options\": [],\n            \"correctOptionIndex\": null,\n            \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:38:12.215289\",\n            \"updatedAt\": \"2025-03-08T13:38:12.215289\"\n        },\n        {\n            \"id\": 10,\n            \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n            \"questionType\": \"SAQ\",\n            \"difficultyLevel\": \"ADVANCED\",\n            \"marks\": 10,\n            \"expectedTimeSeconds\": 300,\n            \"options\": [],\n            \"correctOptionIndex\": null,\n            \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n            \"questionPaperId\": 1,\n            \"createdAt\": \"2025-03-08T13:38:13.468664\",\n            \"updatedAt\": \"2025-03-08T13:38:13.468664\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": false,\n    \"totalPages\": 2,\n    \"totalElements\": 14,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 10,\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Questions by question paper (non-paginated)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{hosted_url}}/questions/paper/2/all"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/questions/paper/1/all"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 08:32:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 2,\n        \"questionText\": \"What is Newton's First Law of Motion?\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"INTERMEDIATE\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 120,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:36:42.872393\",\n        \"updatedAt\": \"2025-03-08T13:36:42.872393\"\n    },\n    {\n        \"id\": 3,\n        \"questionText\": \"What is Newton's First Law of Motion?\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"INTERMEDIATE\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 120,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:36:44.699023\",\n        \"updatedAt\": \"2025-03-08T13:36:44.699023\"\n    },\n    {\n        \"id\": 4,\n        \"questionText\": \"What is Newton's First Law of Motion?\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"INTERMEDIATE\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 120,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:36:46.276443\",\n        \"updatedAt\": \"2025-03-08T13:36:46.276443\"\n    },\n    {\n        \"id\": 5,\n        \"questionText\": \"What is Newton's First Law of Motion?\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"INTERMEDIATE\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 120,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:36:48.867612\",\n        \"updatedAt\": \"2025-03-08T13:36:48.867612\"\n    },\n    {\n        \"id\": 6,\n        \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n        \"questionType\": \"SAQ\",\n        \"difficultyLevel\": \"ADVANCED\",\n        \"marks\": 10,\n        \"expectedTimeSeconds\": 300,\n        \"options\": [],\n        \"correctOptionIndex\": null,\n        \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:07.702325\",\n        \"updatedAt\": \"2025-03-08T13:38:07.702325\"\n    },\n    {\n        \"id\": 7,\n        \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n        \"questionType\": \"SAQ\",\n        \"difficultyLevel\": \"ADVANCED\",\n        \"marks\": 10,\n        \"expectedTimeSeconds\": 300,\n        \"options\": [],\n        \"correctOptionIndex\": null,\n        \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:09.601384\",\n        \"updatedAt\": \"2025-03-08T13:38:09.601384\"\n    },\n    {\n        \"id\": 8,\n        \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n        \"questionType\": \"SAQ\",\n        \"difficultyLevel\": \"ADVANCED\",\n        \"marks\": 10,\n        \"expectedTimeSeconds\": 300,\n        \"options\": [],\n        \"correctOptionIndex\": null,\n        \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:10.922493\",\n        \"updatedAt\": \"2025-03-08T13:38:10.922493\"\n    },\n    {\n        \"id\": 9,\n        \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n        \"questionType\": \"SAQ\",\n        \"difficultyLevel\": \"ADVANCED\",\n        \"marks\": 10,\n        \"expectedTimeSeconds\": 300,\n        \"options\": [],\n        \"correctOptionIndex\": null,\n        \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:12.215289\",\n        \"updatedAt\": \"2025-03-08T13:38:12.215289\"\n    },\n    {\n        \"id\": 10,\n        \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n        \"questionType\": \"SAQ\",\n        \"difficultyLevel\": \"ADVANCED\",\n        \"marks\": 10,\n        \"expectedTimeSeconds\": 300,\n        \"options\": [],\n        \"correctOptionIndex\": null,\n        \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:13.468664\",\n        \"updatedAt\": \"2025-03-08T13:38:13.468664\"\n    },\n    {\n        \"id\": 11,\n        \"questionText\": \"What is Newton's First Law of Motion?\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"INTERMEDIATE\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 120,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:26.118983\",\n        \"updatedAt\": \"2025-03-08T13:38:26.118983\"\n    },\n    {\n        \"id\": 12,\n        \"questionText\": \"Explain Newton's First Law of Motion and give an example from everyday life.\",\n        \"questionType\": \"SAQ\",\n        \"difficultyLevel\": \"ADVANCED\",\n        \"marks\": 10,\n        \"expectedTimeSeconds\": 300,\n        \"options\": [],\n        \"correctOptionIndex\": null,\n        \"modelAnswer\": \"Newton's First Law of Motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an external force. This is also known as the Law of Inertia. An everyday example is when a car stops suddenly and passengers continue to move forward - their bodies want to stay in motion until acted upon by an external force (like a seatbelt).\",\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:30.090603\",\n        \"updatedAt\": \"2025-03-08T13:38:30.090603\"\n    },\n    {\n        \"id\": 13,\n        \"questionText\": \"What is Newton's First Law of Motion?\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"INTERMEDIATE\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 120,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:38:45.308329\",\n        \"updatedAt\": \"2025-03-08T13:38:45.308329\"\n    },\n    {\n        \"id\": 1,\n        \"questionText\": \"What is Newton's First Law of Motion? (Updated)\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"BEGINNER\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 90,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:35:35.816094\",\n        \"updatedAt\": \"2025-03-08T13:46:00.808227\"\n    },\n    {\n        \"id\": 15,\n        \"questionText\": \"What is Newton's First Law of Motion? (Updated)\",\n        \"questionType\": \"MCQ\",\n        \"difficultyLevel\": \"BEGINNER\",\n        \"marks\": 5,\n        \"expectedTimeSeconds\": 90,\n        \"options\": [\n            \"An object at rest stays at rest unless acted upon by an external force\",\n            \"Force equals mass times acceleration\",\n            \"For every action, there is an equal and opposite reaction\",\n            \"Energy can neither be created nor destroyed\"\n        ],\n        \"correctOptionIndex\": 0,\n        \"modelAnswer\": null,\n        \"questionPaperId\": 1,\n        \"createdAt\": \"2025-03-08T13:49:24.393752\",\n        \"updatedAt\": \"2025-03-08T13:49:43.350642\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get question by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/questions/9"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/questions/1"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 08:33:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionText\": \"What is Newton's First Law of Motion? (Updated)\",\n    \"questionType\": \"MCQ\",\n    \"difficultyLevel\": \"BEGINNER\",\n    \"marks\": 5,\n    \"expectedTimeSeconds\": 90,\n    \"options\": [\n        \"An object at rest stays at rest unless acted upon by an external force\",\n        \"Force equals mass times acceleration\",\n        \"For every action, there is an equal and opposite reaction\",\n        \"Energy can neither be created nor destroyed\"\n    ],\n    \"correctOptionIndex\": 0,\n    \"modelAnswer\": null,\n    \"questionPaperId\": 1,\n    \"createdAt\": \"2025-03-08T13:35:35.816094\",\n    \"updatedAt\": \"2025-03-08T13:46:00.808227\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update question",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"questionText\": \"What is the National Anthem of India?\",\r\n    \"questionType\": \"SAQ\",\r\n    \"difficultyLevel\": \"BEGINNER\",\r\n    \"marks\": 4,\r\n    \"expectedTimeSeconds\": 60,\r\n    \"modelAnswer\": \"The National Anthem of India is Jana Gana Mana\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/questions/8"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"questionText\": \"What is Newton's First Law of Motion? (Updated)\",\r\n  \"questionType\": \"MCQ\",\r\n  \"difficultyLevel\": \"BEGINNER\",\r\n  \"marks\": 5,\r\n  \"expectedTimeSeconds\": 90,\r\n  \"options\": [\r\n    \"An object at rest stays at rest unless acted upon by an external force\",\r\n    \"Force equals mass times acceleration\",\r\n    \"For every action, there is an equal and opposite reaction\",\r\n    \"Energy can neither be created nor destroyed\"\r\n  ],\r\n  \"correctOptionIndex\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/questions/1"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 08:16:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionText\": \"What is Newton's First Law of Motion? (Updated)\",\n    \"questionType\": \"MCQ\",\n    \"difficultyLevel\": \"BEGINNER\",\n    \"marks\": 5,\n    \"expectedTimeSeconds\": 90,\n    \"options\": [\n        \"An object at rest stays at rest unless acted upon by an external force\",\n        \"Force equals mass times acceleration\",\n        \"For every action, there is an equal and opposite reaction\",\n        \"Energy can neither be created nor destroyed\"\n    ],\n    \"correctOptionIndex\": 0,\n    \"modelAnswer\": null,\n    \"questionPaperId\": 1,\n    \"createdAt\": \"2025-03-08T13:35:35.816094\",\n    \"updatedAt\": \"2025-03-08T13:46:00.8072261\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete question",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url}}/questions/7"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{url}}/questions/14"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 08:17:59 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Question deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Student User\",\r\n    \"username\": \"Student1\",\r\n    \"email\": \"student1@example.com\",\r\n    \"password\": \"student123\",\r\n    \"role\": \"ROLE_STUDENT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/auth/register"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Atul Singh\",\r\n    \"username\": \"cocatul\",\r\n    \"email\": \"atul@email.com\",\r\n    \"password\": \"cocatul11\",\r\n    \"role\": \"ROLE_STUDENT\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{hosted_url}}/auth/register"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:26:52 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "58403680-5046-4b47"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc24ab4a6a94d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjb2NhdHVsIiwiaWF0IjoxNzQxMzcyMDEyLCJleHAiOjE3NDE0NTg0MTJ9.0mD8bKkQfWi7WeT48zgrxDMV3lQrHuuTOqwSoO_EuP3rWbBqfkKczDrs3GKF1N9q\",\n    \"user\": {\n        \"id\": 4,\n        \"name\": \"Atul Singh\",\n        \"username\": \"cocatul\",\n        \"email\": \"atul@email.com\",\n        \"role\": \"ROLE_STUDENT\",\n        \"profilePictureUrl\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usernameOrEmail\": \"Student1\",\r\n    \"password\": \"student123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/auth/login"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"usernameOrEmail\": \"atul@email.com\",\r\n    \"password\": \"cocatul11\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{hosted_url}}/auth/login"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:29:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "6a1458d9-755d-47a9"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc281d7a5694d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJjb2NhdHVsIiwiaWF0IjoxNzQxMzcyMTUxLCJleHAiOjE3NDE0NTg1NTF9.RwUmmyuTst4l5vB5p_tMyTkOL5OabXekIFjrfAWUGZtziN_AWBYAN5wcvkCcElGv\",\n    \"user\": {\n        \"id\": 4,\n        \"name\": \"Atul Singh\",\n        \"username\": \"cocatul\",\n        \"email\": \"atul@email.com\",\n        \"role\": \"ROLE_STUDENT\",\n        \"profilePictureUrl\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get current user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/users/me"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{hosted_url}}/users/me"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:29:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "0410f8cf-f287-4915"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc288fa96994d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"name\": \"Admin User\",\n    \"username\": \"admin\",\n    \"email\": \"admin@smartprep.com\",\n    \"role\": \"ROLE_ADMIN\",\n    \"profilePictureUrl\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Get all users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/users"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{hosted_url}}/users"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:30:00 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "0caa9fb1-70b1-44d5"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc294fab0594d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 2,\n            \"name\": \"Test Student\",\n            \"username\": \"teststudent\",\n            \"email\": \"student@test.com\",\n            \"role\": \"ROLE_STUDENT\",\n            \"profilePictureUrl\": null\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Admin User\",\n            \"username\": \"admin\",\n            \"email\": \"admin@smartprep.com\",\n            \"role\": \"ROLE_ADMIN\",\n            \"profilePictureUrl\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Atul Singh\",\n            \"username\": \"cocatul\",\n            \"email\": \"atul@email.com\",\n            \"role\": \"ROLE_STUDENT\",\n            \"profilePictureUrl\": null\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"unsorted\": true,\n            \"sorted\": false,\n            \"empty\": true\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"totalPages\": 1,\n    \"totalElements\": 3,\n    \"last\": true,\n    \"numberOfElements\": 3,\n    \"first\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"unsorted\": true,\n        \"sorted\": false,\n        \"empty\": true\n    },\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get user by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{hosted_url}}/users/2"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{hosted_url}}/users/4"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 07 Mar 2025 18:30:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "expires",
+											"value": "0"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "rndr-id",
+											"value": "23ca85d3-112c-48cb"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=31536000 ; includeSubDomains"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "x-content-type-options",
+											"value": "nosniff"
+										},
+										{
+											"key": "x-frame-options",
+											"value": "DENY"
+										},
+										{
+											"key": "x-render-origin-server",
+											"value": "Render"
+										},
+										{
+											"key": "x-xss-protection",
+											"value": "0"
+										},
+										{
+											"key": "CF-Cache-Status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "91cc29facbcc94d0-CCU"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"name\": \"Atul Singh\",\n    \"username\": \"cocatul\",\n    \"email\": \"atul@email.com\",\n    \"role\": \"ROLE_STUDENT\",\n    \"profilePictureUrl\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Quiz Attempt",
+					"item": [
+						{
+							"name": "Get available question papers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/quiz/available?page=0&size=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"available"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/available?page=0&size=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"available"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 15:07:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 2,\n            \"title\": \"Class Test\",\n            \"description\": \"Class test II\",\n            \"questionBankName\": \"General Knowledge trivia\",\n            \"creatorName\": \"Teacher User\",\n            \"duration\": 10,\n            \"totalQuestions\": 10,\n            \"difficultyLevel\": \"EASY\",\n            \"totalMarks\": 30,\n            \"passingMarks\": 10,\n            \"attemptsMade\": 0,\n            \"hasPendingAttempt\": false\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Test\",\n            \"description\": \"testing while wifi was out to check emulator internet\",\n            \"questionBankName\": \"Chemistry\",\n            \"creatorName\": \"demo\",\n            \"duration\": 100,\n            \"totalQuestions\": 10,\n            \"difficultyLevel\": \"EASY\",\n            \"totalMarks\": 100,\n            \"passingMarks\": 10,\n            \"attemptsMade\": 0,\n            \"hasPendingAttempt\": false\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Inorganic Chemistry\",\n            \"description\": \"Inorganic Chemistry Sample Papers\",\n            \"questionBankName\": \"Chemistry\",\n            \"creatorName\": \"demo\",\n            \"duration\": 120,\n            \"totalQuestions\": 10,\n            \"difficultyLevel\": \"EASY\",\n            \"totalMarks\": 100,\n            \"passingMarks\": 40,\n            \"attemptsMade\": 0,\n            \"hasPendingAttempt\": false\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalElements\": 3,\n    \"totalPages\": 1,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 3,\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Start a quiz attempt",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{url}}/quiz/start/2"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{url}}/quiz/start/2"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 15:28:10 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionPaperId\": 2,\n    \"questionPaperTitle\": \"Class Test\",\n    \"startTime\": \"2025-03-08T20:58:10.369775\",\n    \"endTime\": null,\n    \"completed\": false,\n    \"score\": null,\n    \"totalMarks\": null,\n    \"percentage\": null,\n    \"passed\": null,\n    \"remainingTime\": 599,\n    \"answers\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Get quiz attempt details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/quiz/attempt/1"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/quiz/attempt/1"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 15:29:43 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionPaperId\": 2,\n    \"questionPaperTitle\": \"Class Test\",\n    \"startTime\": \"2025-03-08T20:58:10.369775\",\n    \"endTime\": null,\n    \"completed\": false,\n    \"score\": null,\n    \"totalMarks\": null,\n    \"percentage\": null,\n    \"passed\": null,\n    \"remainingTime\": 507,\n    \"answers\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Submit an answer to an mcq question",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"questionId\": 6, \r\n  \"selectedOptionIndex\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/quiz/attempt/1/answer"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"questionId\": 1, \r\n  \"selectedOptionIndex\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/quiz/attempt/1/answer"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 15:30:58 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionId\": 1,\n    \"questionText\": \"What is the largest lake in the world?\",\n    \"questionType\": \"MCQ\",\n    \"difficultyLevel\": \"BEGINNER\",\n    \"marks\": 2,\n    \"options\": [\n        \"Caspian Sea\",\n        \"Baikal\",\n        \"Lake Superior\",\n        \"Ontario\"\n    ],\n    \"selectedOptionIndex\": 1,\n    \"textAnswer\": null,\n    \"isCorrect\": null,\n    \"marksAwarded\": null,\n    \"aiFeedback\": null,\n    \"teacherFeedback\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Submit an answer to an saq question",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"questionId\": 8,\r\n  \"textAnswer\": \"Jana Gana Mana\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/quiz/attempt/1/answer"
+							},
+							"response": []
+						},
+						{
+							"name": "Check quiz attempt after answering questions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/quiz/attempt/1"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/quiz/attempt/1"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 18:10:55 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionPaperId\": 2,\n    \"questionPaperTitle\": \"Class Test\",\n    \"startTime\": \"2025-03-08T20:58:10.369775\",\n    \"endTime\": \"2025-03-08T21:32:24.832954\",\n    \"completed\": true,\n    \"score\": 6,\n    \"totalMarks\": 30,\n    \"percentage\": 20,\n    \"passed\": false,\n    \"remainingTime\": 0,\n    \"answers\": [\n        {\n            \"id\": 1,\n            \"questionId\": 1,\n            \"questionText\": \"What is the largest lake in the world?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Caspian Sea\",\n                \"Baikal\",\n                \"Lake Superior\",\n                \"Ontario\"\n            ],\n            \"selectedOptionIndex\": 1,\n            \"textAnswer\": null,\n            \"isCorrect\": true,\n            \"marksAwarded\": 2,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 2,\n            \"questionId\": 2,\n            \"questionText\": \"Which planet in the solar system is known as the “Red Planet”?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Venus\",\n                \"Earth\",\n                \"Mars\",\n                \"Jupiter\"\n            ],\n            \"selectedOptionIndex\": 3,\n            \"textAnswer\": null,\n            \"isCorrect\": false,\n            \"marksAwarded\": 0,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 3,\n            \"questionId\": 4,\n            \"questionText\": \"What is the capital of Japan?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Beijing\",\n                \"Tokyo\",\n                \"Seoul\",\n                \"Bangkok\"\n            ],\n            \"selectedOptionIndex\": 2,\n            \"textAnswer\": null,\n            \"isCorrect\": false,\n            \"marksAwarded\": 0,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 4,\n            \"questionId\": 5,\n            \"questionText\": \"Which river is the longest in the world?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Amazon\",\n                \"Mississippi\",\n                \"Nile\",\n                \"Yangtze\"\n            ],\n            \"selectedOptionIndex\": 2,\n            \"textAnswer\": null,\n            \"isCorrect\": true,\n            \"marksAwarded\": 2,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 5,\n            \"questionId\": 6,\n            \"questionText\": \"What animal is the national symbol of Australia?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Kangaroo\",\n                \"Koala\",\n                \"Emu\",\n                \"Crocodile\"\n            ],\n            \"selectedOptionIndex\": 0,\n            \"textAnswer\": null,\n            \"isCorrect\": true,\n            \"marksAwarded\": 2,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Submit the quiz attempt",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{url}}/quiz/attempt/{{attempt_id}}/submit"
+							},
+							"response": []
+						},
+						{
+							"name": "Get quiz result",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/quiz/result/1"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/quiz/result/1"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 18:11:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionPaperId\": 2,\n    \"questionPaperTitle\": \"Class Test\",\n    \"startTime\": \"2025-03-08T20:58:10.369775\",\n    \"endTime\": \"2025-03-08T21:32:24.832954\",\n    \"timeTakenMinutes\": 34,\n    \"score\": 6,\n    \"totalMarks\": 30,\n    \"percentage\": 20,\n    \"passed\": false,\n    \"answers\": [\n        {\n            \"id\": 1,\n            \"questionId\": 1,\n            \"questionText\": \"What is the largest lake in the world?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Caspian Sea\",\n                \"Baikal\",\n                \"Lake Superior\",\n                \"Ontario\"\n            ],\n            \"selectedOptionIndex\": 1,\n            \"textAnswer\": null,\n            \"isCorrect\": true,\n            \"marksAwarded\": 2,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 2,\n            \"questionId\": 2,\n            \"questionText\": \"Which planet in the solar system is known as the “Red Planet”?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Venus\",\n                \"Earth\",\n                \"Mars\",\n                \"Jupiter\"\n            ],\n            \"selectedOptionIndex\": 3,\n            \"textAnswer\": null,\n            \"isCorrect\": false,\n            \"marksAwarded\": 0,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 3,\n            \"questionId\": 4,\n            \"questionText\": \"What is the capital of Japan?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Beijing\",\n                \"Tokyo\",\n                \"Seoul\",\n                \"Bangkok\"\n            ],\n            \"selectedOptionIndex\": 2,\n            \"textAnswer\": null,\n            \"isCorrect\": false,\n            \"marksAwarded\": 0,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 4,\n            \"questionId\": 5,\n            \"questionText\": \"Which river is the longest in the world?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Amazon\",\n                \"Mississippi\",\n                \"Nile\",\n                \"Yangtze\"\n            ],\n            \"selectedOptionIndex\": 2,\n            \"textAnswer\": null,\n            \"isCorrect\": true,\n            \"marksAwarded\": 2,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        },\n        {\n            \"id\": 5,\n            \"questionId\": 6,\n            \"questionText\": \"What animal is the national symbol of Australia?\",\n            \"questionType\": \"MCQ\",\n            \"difficultyLevel\": \"BEGINNER\",\n            \"marks\": 2,\n            \"options\": [\n                \"Kangaroo\",\n                \"Koala\",\n                \"Emu\",\n                \"Crocodile\"\n            ],\n            \"selectedOptionIndex\": 0,\n            \"textAnswer\": null,\n            \"isCorrect\": true,\n            \"marksAwarded\": 2,\n            \"aiFeedback\": null,\n            \"teacherFeedback\": null\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get all student's attempts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/quiz/attempts?page=0&size=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"attempts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/attempts?page=0&size=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"attempts"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 16:01:29 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"questionPaperId\": 2,\n            \"questionPaperTitle\": \"Class Test\",\n            \"startTime\": \"2025-03-08T20:58:10.369775\",\n            \"endTime\": null,\n            \"completed\": false,\n            \"score\": null,\n            \"totalMarks\": null,\n            \"percentage\": null,\n            \"passed\": null,\n            \"remainingTime\": 0,\n            \"answers\": [\n                {\n                    \"id\": 1,\n                    \"questionId\": 1,\n                    \"questionText\": \"What is the largest lake in the world?\",\n                    \"questionType\": \"MCQ\",\n                    \"difficultyLevel\": \"BEGINNER\",\n                    \"marks\": 2,\n                    \"options\": [\n                        \"Caspian Sea\",\n                        \"Baikal\",\n                        \"Lake Superior\",\n                        \"Ontario\"\n                    ],\n                    \"selectedOptionIndex\": 1,\n                    \"textAnswer\": null,\n                    \"isCorrect\": null,\n                    \"marksAwarded\": null,\n                    \"aiFeedback\": null,\n                    \"teacherFeedback\": null\n                },\n                {\n                    \"id\": 2,\n                    \"questionId\": 2,\n                    \"questionText\": \"Which planet in the solar system is known as the “Red Planet”?\",\n                    \"questionType\": \"MCQ\",\n                    \"difficultyLevel\": \"BEGINNER\",\n                    \"marks\": 2,\n                    \"options\": [\n                        \"Venus\",\n                        \"Earth\",\n                        \"Mars\",\n                        \"Jupiter\"\n                    ],\n                    \"selectedOptionIndex\": 3,\n                    \"textAnswer\": null,\n                    \"isCorrect\": null,\n                    \"marksAwarded\": null,\n                    \"aiFeedback\": null,\n                    \"teacherFeedback\": null\n                },\n                {\n                    \"id\": 3,\n                    \"questionId\": 4,\n                    \"questionText\": \"What is the capital of Japan?\",\n                    \"questionType\": \"MCQ\",\n                    \"difficultyLevel\": \"BEGINNER\",\n                    \"marks\": 2,\n                    \"options\": [\n                        \"Beijing\",\n                        \"Tokyo\",\n                        \"Seoul\",\n                        \"Bangkok\"\n                    ],\n                    \"selectedOptionIndex\": 2,\n                    \"textAnswer\": null,\n                    \"isCorrect\": null,\n                    \"marksAwarded\": null,\n                    \"aiFeedback\": null,\n                    \"teacherFeedback\": null\n                },\n                {\n                    \"id\": 4,\n                    \"questionId\": 5,\n                    \"questionText\": \"Which river is the longest in the world?\",\n                    \"questionType\": \"MCQ\",\n                    \"difficultyLevel\": \"BEGINNER\",\n                    \"marks\": 2,\n                    \"options\": [\n                        \"Amazon\",\n                        \"Mississippi\",\n                        \"Nile\",\n                        \"Yangtze\"\n                    ],\n                    \"selectedOptionIndex\": 2,\n                    \"textAnswer\": null,\n                    \"isCorrect\": null,\n                    \"marksAwarded\": null,\n                    \"aiFeedback\": null,\n                    \"teacherFeedback\": null\n                },\n                {\n                    \"id\": 5,\n                    \"questionId\": 6,\n                    \"questionText\": \"What animal is the national symbol of Australia?\",\n                    \"questionType\": \"MCQ\",\n                    \"difficultyLevel\": \"BEGINNER\",\n                    \"marks\": 2,\n                    \"options\": [\n                        \"Kangaroo\",\n                        \"Koala\",\n                        \"Emu\",\n                        \"Crocodile\"\n                    ],\n                    \"selectedOptionIndex\": 0,\n                    \"textAnswer\": null,\n                    \"isCorrect\": null,\n                    \"marksAwarded\": null,\n                    \"aiFeedback\": null,\n                    \"teacherFeedback\": null\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"sorted\": true,\n            \"empty\": false,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalElements\": 1,\n    \"totalPages\": 1,\n    \"first\": true,\n    \"numberOfElements\": 1,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"sorted\": true,\n        \"empty\": false,\n        \"unsorted\": false\n    },\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get completed details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/quiz/attempts/completed"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/quiz/attempts/completed"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 18:12:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"questionPaperId\": 2,\n        \"questionPaperTitle\": \"Class Test\",\n        \"startTime\": \"2025-03-08T20:58:10.369775\",\n        \"endTime\": \"2025-03-08T21:32:24.832954\",\n        \"completed\": true,\n        \"score\": 6,\n        \"totalMarks\": 30,\n        \"percentage\": 20,\n        \"passed\": false,\n        \"remainingTime\": 0,\n        \"answers\": [\n            {\n                \"id\": 1,\n                \"questionId\": 1,\n                \"questionText\": \"What is the largest lake in the world?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Caspian Sea\",\n                    \"Baikal\",\n                    \"Lake Superior\",\n                    \"Ontario\"\n                ],\n                \"selectedOptionIndex\": 1,\n                \"textAnswer\": null,\n                \"isCorrect\": true,\n                \"marksAwarded\": 2,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 2,\n                \"questionId\": 2,\n                \"questionText\": \"Which planet in the solar system is known as the “Red Planet”?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Venus\",\n                    \"Earth\",\n                    \"Mars\",\n                    \"Jupiter\"\n                ],\n                \"selectedOptionIndex\": 3,\n                \"textAnswer\": null,\n                \"isCorrect\": false,\n                \"marksAwarded\": 0,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 3,\n                \"questionId\": 4,\n                \"questionText\": \"What is the capital of Japan?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Beijing\",\n                    \"Tokyo\",\n                    \"Seoul\",\n                    \"Bangkok\"\n                ],\n                \"selectedOptionIndex\": 2,\n                \"textAnswer\": null,\n                \"isCorrect\": false,\n                \"marksAwarded\": 0,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 4,\n                \"questionId\": 5,\n                \"questionText\": \"Which river is the longest in the world?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Amazon\",\n                    \"Mississippi\",\n                    \"Nile\",\n                    \"Yangtze\"\n                ],\n                \"selectedOptionIndex\": 2,\n                \"textAnswer\": null,\n                \"isCorrect\": true,\n                \"marksAwarded\": 2,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 5,\n                \"questionId\": 6,\n                \"questionText\": \"What animal is the national symbol of Australia?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Kangaroo\",\n                    \"Koala\",\n                    \"Emu\",\n                    \"Crocodile\"\n                ],\n                \"selectedOptionIndex\": 0,\n                \"textAnswer\": null,\n                \"isCorrect\": true,\n                \"marksAwarded\": 2,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            }\n        ]\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get incomplete attempts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/quiz/attempts/incomplete"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/quiz/attempts/incomplete"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Mar 2025 15:59:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"questionPaperId\": 2,\n        \"questionPaperTitle\": \"Class Test\",\n        \"startTime\": \"2025-03-08T20:58:10.369775\",\n        \"endTime\": null,\n        \"completed\": false,\n        \"score\": null,\n        \"totalMarks\": null,\n        \"percentage\": null,\n        \"passed\": null,\n        \"remainingTime\": 0,\n        \"answers\": [\n            {\n                \"id\": 1,\n                \"questionId\": 1,\n                \"questionText\": \"What is the largest lake in the world?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Caspian Sea\",\n                    \"Baikal\",\n                    \"Lake Superior\",\n                    \"Ontario\"\n                ],\n                \"selectedOptionIndex\": 1,\n                \"textAnswer\": null,\n                \"isCorrect\": null,\n                \"marksAwarded\": null,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 2,\n                \"questionId\": 2,\n                \"questionText\": \"Which planet in the solar system is known as the “Red Planet”?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Venus\",\n                    \"Earth\",\n                    \"Mars\",\n                    \"Jupiter\"\n                ],\n                \"selectedOptionIndex\": 3,\n                \"textAnswer\": null,\n                \"isCorrect\": null,\n                \"marksAwarded\": null,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 3,\n                \"questionId\": 4,\n                \"questionText\": \"What is the capital of Japan?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Beijing\",\n                    \"Tokyo\",\n                    \"Seoul\",\n                    \"Bangkok\"\n                ],\n                \"selectedOptionIndex\": 2,\n                \"textAnswer\": null,\n                \"isCorrect\": null,\n                \"marksAwarded\": null,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 4,\n                \"questionId\": 5,\n                \"questionText\": \"Which river is the longest in the world?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Amazon\",\n                    \"Mississippi\",\n                    \"Nile\",\n                    \"Yangtze\"\n                ],\n                \"selectedOptionIndex\": 2,\n                \"textAnswer\": null,\n                \"isCorrect\": null,\n                \"marksAwarded\": null,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            },\n            {\n                \"id\": 5,\n                \"questionId\": 6,\n                \"questionText\": \"What animal is the national symbol of Australia?\",\n                \"questionType\": \"MCQ\",\n                \"difficultyLevel\": \"BEGINNER\",\n                \"marks\": 2,\n                \"options\": [\n                    \"Kangaroo\",\n                    \"Koala\",\n                    \"Emu\",\n                    \"Crocodile\"\n                ],\n                \"selectedOptionIndex\": 0,\n                \"textAnswer\": null,\n                \"isCorrect\": null,\n                \"marksAwarded\": null,\n                \"aiFeedback\": null,\n                \"teacherFeedback\": null\n            }\n        ]\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJTdHVkZW50MSIsImlhdCI6MTc0MTQ1NzQxMCwiZXhwIjoxNzQxNTQzODEwfQ.CML7Mm7X0ImI8s-uXmsqph5xxL_Hnwg8VlfajMgP-GNhgYe2rO48ql7GjTkde6Pg"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZWFjaGVyMiIsImlhdCI6MTc0MTQ1NzM1MCwiZXhwIjoxNzQxNTQzNzUwfQ.bjnHvHzG0yvBIpABLdvtQs1xuBxVG16gE_n5GBHz1b6hIjOQmlr08EymXzPsMMsS"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/api",
+			"type": "string"
+		},
+		{
+			"key": "hosted_url",
+			"value": "http://13.200.237.62:5555/api",
+			"type": "string"
+		},
+		{
+			"value": "http://13.200.237.62:5555/api",
+			"type": "string"
+		}
+	]
+}
