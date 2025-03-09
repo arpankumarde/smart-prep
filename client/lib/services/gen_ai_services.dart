@@ -7,7 +7,6 @@ class GenAiService {
   Future<Map<String, dynamic>> analyseStudent(String data) async {
     final url = Uri.parse(
         '$baseUrl/analyse-student-1/?data=${Uri.encodeComponent(data)}');
-
     final response = await http.get(url);
     return jsonDecode(response.body)['response'];
   }

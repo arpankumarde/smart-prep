@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:smart_prep/providers/gen_ai_provider.dart';
+import 'package:smart_prep/pages/students/study_materials_page.dart';
 import 'package:smart_prep/providers/question_provider.dart';
 import 'package:smart_prep/providers/student_providers.dart';
 import 'package:smart_prep/services/secure_storage_service.dart';
@@ -43,16 +43,6 @@ class _StudentQuestionPaperPageState
   }
 
   void _confirm() {
-    String finalString = studentAnswers.asMap().entries.map((entry) {
-      int index = entry.key;
-      return '''
-{
-  "questionText": "${questionTexts[index]}",
-  "modelAnswer": "${modelAnswers[index]}",
-  "studentAnswer": "${studentAnswers[index]}"
-}''';
-    }).join(",\n");
-
     final parentContext = context;
     showDialog(
       context: parentContext,
@@ -85,8 +75,11 @@ class _StudentQuestionPaperPageState
               await ref
                   .read(studentNotifierProvider.notifier)
                   .getAvailableQuestionPapers(token);
-              Navigator.pop(parentContext);
-             await ref.read(analyseStudentProvider(finalString));
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => StudyMaterialsPage(),
+                ),
+              );
             },
             icon: const Text(
               'YES',
